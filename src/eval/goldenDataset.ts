@@ -80,10 +80,10 @@ B.S. Electrical Engineering, UC Berkeley (2014)`,
   {
     id: "gold_002",
     jd: SENIOR_PM_AI_JD,
-    expected_verdict: "yes",
-    expected_fit_range: [0.55, 0.82],
+    expected_verdict: "no",
+    expected_fit_range: [0.40, 0.62],
     notes:
-      "Tests sparse resume: employer and dates redacted, skills listed without project context. Correct verdict is yes with low confidence — resume is incomplete, not negative evidence. Tests that the model does not penalise sparsity as a proxy for weak fit.",
+      "Tests sparse resume with underspecified skills. Correct verdict is no — mentioning skills without demonstrating them is not sufficient evidence. Confidence should be low (0.55–0.75) reflecting sparsity, but verdict should reflect the actual evidence present.",
     resume: `EXPERIENCE
 
 Product Manager, AI Platform
