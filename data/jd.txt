@@ -1,0 +1,35 @@
+Senior Product Manager — AI/ML Platform
+
+About the Role
+We are looking for a Senior Product Manager to lead our AI/ML Platform product, working at the intersection of infrastructure, data science, and internal developer tooling. You will own the roadmap for the platform that powers all ML-driven features across the company.
+
+Responsibilities
+- Define and execute the product vision and multi-quarter roadmap for the AI/ML Platform
+- Partner closely with ML engineers, data scientists, and platform engineers to ship infrastructure that improves model development velocity
+- Translate ambiguous business problems into crisp product requirements and acceptance criteria
+- Lead cross-functional alignment across Engineering, Data Science, Design, and GTM teams
+- Drive prioritization decisions using quantitative data, customer interviews, and business impact modeling
+- Define and track success metrics for platform adoption and developer productivity
+- Communicate product strategy and progress to senior leadership (VP/C-suite)
+- Mentor junior PMs on the team
+
+Required Skills
+- 5+ years of product management experience, with at least 2 years managing technical or infrastructure products
+- Strong understanding of the ML lifecycle: data collection, feature engineering, model training, deployment, and monitoring
+- Experience defining APIs, SDKs, or developer-facing platform products
+- Proficiency with data analysis and metrics (SQL, A/B testing, product analytics tools)
+- Excellent written and verbal communication; able to write crisp PRDs and present to executives
+- Track record of shipping complex cross-functional projects on time
+
+Preferred Skills
+- Previous experience at a growth-stage or large tech company in an ML/AI product role
+- Familiarity with cloud ML platforms (AWS SageMaker, GCP Vertex AI, or Azure ML)
+- Experience with feature stores, experiment tracking (MLflow, W&B), or model serving frameworks
+- MBA or graduate degree in a quantitative field
+
+Culture & Values
+- We move fast and value bias to action over perfect planning
+- We are deeply data-driven — intuition is a starting point, not a conclusion
+- We believe in strong ownership: PMs here own outcomes, not just outputs
+- Collaborative, low-ego environment where the best idea wins regardless of seniority
+- Remote-first with quarterly in-person off-sites

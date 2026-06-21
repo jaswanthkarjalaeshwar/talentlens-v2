@@ -1,0 +1,91 @@
+---CANDIDATE:alice-chen---
+PROFESSIONAL SUMMARY
+8 years in product management across consumer and platform products. For the past 4 years I have led the ML Infrastructure product at a Series D fintech company, owning a platform used by 60 data scientists and 120 ML engineers. Deep familiarity with the full ML lifecycle and developer-facing API products.
+
+EXPERIENCE
+
+Senior Product Manager, ML Platform — FinCore Inc (2020–present)
+- Owned the roadmap for the company's feature store and model serving infrastructure; grew platform adoption from 12 to 60 data scientists in 18 months
+- Defined the API contract and SDK design for FinCore's internal ML experimentation framework; reduced model deployment time from 3 weeks to 4 days
+- Led cross-functional squads of 8–12 engineers and collaborated with the Chief Data Officer on annual platform strategy
+- Drove A/B testing framework adoption across 5 product lines; established OKRs tracked weekly with VP Data
+- Launched a self-serve model monitoring dashboard, cutting oncall incidents by 35%
+
+Product Manager, Developer Tools — BuildBetter (2017–2020)
+- Managed CI/CD tooling product used by 1,200 engineers
+- Wrote weekly executive briefings for CTO and VP Engineering
+- Grew NPS of internal developer tooling from 14 to 52 over 18 months
+
+SKILLS
+SQL (advanced), Python (intermediate), MLflow, AWS SageMaker, Weights & Biases, Figma, JIRA, Confluence
+
+EDUCATION
+B.S. Computer Science, State University
+---CANDIDATE:ben-okafor---
+SUMMARY
+Product manager with 6 years of experience in consumer mobile apps and growth. Recently transitioned to a B2B SaaS role. Excited about AI and looking to move into AI/ML product roles.
+
+EXPERIENCE
+
+Product Manager, Growth — AppNova (2021–present)
+- Owned onboarding and retention funnels for a 5M DAU consumer app
+- Ran 30+ A/B tests per quarter; improved 30-day retention by 12%
+- Collaborated with marketing and engineering on personalization features powered by a recommendation engine (worked with data science team on requirements)
+
+Associate PM, Mobile — Zestify (2018–2021)
+- Shipped 4 major feature releases for iOS and Android
+- Wrote PRDs and managed sprint ceremonies
+- No direct ML infrastructure or platform experience
+
+EDUCATION
+MBA, University of Chicago Booth School of Business
+
+SKILLS
+Amplitude, Mixpanel, SQL (intermediate), JIRA, some exposure to Python via online courses
+---CANDIDATE:carol-whitfield---
+Carol Whitfield
+
+EXPERIENCE
+
+Staff Product Manager, AI Platform — MegaTech Corp (2019–present)
+- Led the AI Platform product organization as the founding PM; grew the team from 1 to 4 PMs
+- Defined 3-year platform vision adopted by the CPTO; platform now serves 200+ data scientists
+- Owned integration with GCP Vertex AI and internal orchestration layer (Apache Airflow-based); reduced model training iteration time by 55%
+- Built the company's first ML governance and model registry product, meeting SOC 2 and GDPR requirements
+- Regularly presented roadmap and progress to C-suite (CEO, CTO, CPO); ran quarterly business reviews
+
+PM, Infrastructure Products — CloudSys (2016–2019)
+- Managed developer-facing APIs for a multi-cloud orchestration platform (50K+ API calls/day)
+- Wrote the API design guidelines adopted company-wide
+
+EDUCATION
+M.S. Computer Science (Machine Learning), Carnegie Mellon University
+
+SKILLS
+SQL (expert), Python (proficient), Spark, Kubernetes, Vertex AI, SageMaker, MLflow, Looker, Tableau, dbt
+
+WRITING
+Published 3 internal white papers on ML platform strategy; invited speaker at MLOps World 2023
+---CANDIDATE:david-lim---
+David Lim | david@[EMAIL REDACTED] | [PHONE REDACTED]
+
+ABOUT ME
+2 years of product experience at a startup. Passionate about AI and machine learning. Eager to grow into a senior role. Built side projects using OpenAI API.
+
+EXPERIENCE
+
+Product Manager — Startup XYZ (2022–present)
+- Single PM at a 15-person seed-stage startup building an AI writing tool
+- Defined MVP requirements and worked directly with 2 engineers
+- Conducted 20+ customer discovery interviews
+- Product is currently in beta with ~300 users
+
+Product Analyst — RetailCo (2021–2022)
+- Built dashboards in Tableau
+- Ran ad-hoc SQL queries for the marketing team
+
+EDUCATION
+B.A. Economics, UCLA
+
+SKILLS
+SQL (basic), Tableau, basic Python, ChatGPT/OpenAI API (personal projects)
