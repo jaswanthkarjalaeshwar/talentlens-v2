@@ -196,4 +196,31 @@ MBA, Stanford Graduate School of Business (2012)
 M.S. Computer Science (Machine Learning specialisation), MIT (2009)
 B.S. Computer Science, Caltech (2007)`,
   },
+
+  {
+    id: "gold_006",
+    jd: SENIOR_PM_AI_JD,
+    expected_verdict: "yes",
+    expected_fit_range: [0.65, 0.82],
+    notes:
+      "Tests that sparsity alone doesn't disqualify. Evidence is thin but every claim is demonstrated, not just listed. Correct verdict is yes with low confidence. Contrast with gold_002 where skills are mentioned but not evidenced.",
+    resume: `EXPERIENCE
+
+Product Manager, AI Platform — Meridian AI (2021–present)
+Sole PM for ML experimentation and model serving infrastructure, working with 18 data scientists and 6 ML engineers.
+- Shipped MLflow-based experiment tracking integration; model iteration cycle dropped from 14 days to 3 days (measured across 15 model releases over 6 months)
+- Defined REST API schema and Python SDK for the internal feature store; 4 data science teams onboarded within 30 days of v1 launch, zero breaking changes across 3 minor versions shipped
+- Wrote PRD and led launch of automated model monitoring dashboard; silent-failure production incidents fell from 6/month to 1/month over 90 days post-launch
+- Ran A/B test on model deployment pipeline UX (n=22 engineers, 3-week experiment); 34% reduction in failed deployments
+- Presented quarterly platform roadmap to VP Engineering and CTO; all 4 budget requests approved
+
+Senior Associate PM — DataSync Corp (2018–2021)
+Shipped 3 major releases for a B2B SaaS data pipeline product used by 600 enterprise customers. Wrote PRDs, ran sprint planning, and managed stakeholder reviews with engineering leads and sales.
+
+SKILLS
+SQL (proficient), Python (scripting), MLflow, REST API design, AWS S3 and Lambda (basics), Jira
+
+EDUCATION
+B.S. Computer Science, University of Washington (2018)`,
+  },
 ];
