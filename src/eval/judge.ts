@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { randomUUID } from "crypto";
 import { scoreCandidate } from "../agents/resumeAgent.js";
+import { enforceRules } from "../utils/verdictEnforcer.js";
 import { logEvalRun } from "./logger.js";
 import { GOLDEN_CASES, type GoldenCase } from "./goldenDataset.js";
 import type { ResumeAgentOutput } from "../schemas/index.js";
@@ -129,7 +130,8 @@ export async function runEval(): Promise<EvalResult[]> {
       pii_stripped: false,
     };
 
-    const score = await scoreCandidate(candidate, gcase.jd);
+    const rawScore = await scoreCandidate(candidate, gcase.jd);
+    const score = enforceRules(rawScore, gcase.jd, gcase.resume);
 
     const verdictMatch = score.verdict === gcase.expected_verdict;
     const fitInRange =

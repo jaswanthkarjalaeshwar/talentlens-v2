@@ -2,6 +2,7 @@ import { randomUUID } from "crypto";
 import { parseJobDescription } from "./jdParser.js";
 import { scrubAllPII } from "../utils/piiScrubber.js";
 import { scoreCandidate } from "./resumeAgent.js";
+import { enforceRules } from "../utils/verdictEnforcer.js";
 import type { RawCandidate, ResumeAgentOutput } from "../schemas/index.js";
 
 export interface CoordinatorInput {
@@ -15,7 +16,7 @@ export interface CoordinatorOutput {
   jdId: string;
   screenedAt: string;
   modelVersion: string;
-  scores: Array<ResumeAgentOutput & { pii_stripped: boolean }>;
+  scores: Array<ResumeAgentOutput & { pii_stripped: boolean; enforcer_applied: boolean }>;
 }
 
 export async function runCoordinator(input: CoordinatorInput): Promise<CoordinatorOutput> {
@@ -32,8 +33,12 @@ export async function runCoordinator(input: CoordinatorInput): Promise<Coordinat
   // Step 3: Fan out — score all candidates in parallel
   const scoreResults = await Promise.all(
     scrubbed.map(async (candidate) => {
-      const score = await scoreCandidate(candidate, jdCriteria);
-      return { ...score, pii_stripped: candidate.pii_stripped };
+      const rawScore = await scoreCandidate(candidate, jdCriteria);
+      const enforcedScore = enforceRules(rawScore, jdCriteria, candidate.scrubbedText);
+      return {
+        ...enforcedScore,
+        pii_stripped: candidate.pii_stripped,
+      };
     }),
   );
 

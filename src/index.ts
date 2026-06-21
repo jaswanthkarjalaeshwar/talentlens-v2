@@ -89,10 +89,10 @@ async function mainScreening(): Promise<void> {
   console.log("═══════════════════════════════════════════════════════\n");
 
   for (const c of run.candidates) {
-    const flag = c.escalate ? " ⚑ ESCALATE" : "";
+    const flag = [c.escalate ? "⚑ ESCALATE" : "", c.enforcer_applied ? "[E]" : ""].filter(Boolean).join(" ");
     console.log(`  Rank ${c.rank}  [${c.verdict.toUpperCase().padEnd(10)}]  ${c.id}`);
     console.log(
-      `    fit=${c.overall_fit.toFixed(2)}  conf=${c.confidence.toFixed(2)}  skills=${c.scores.skills_match.toFixed(2)}  exp=${c.scores.experience_relevance.toFixed(2)}  culture=${c.scores.culture_signal.toFixed(2)}${flag}`,
+      `    fit=${c.overall_fit.toFixed(2)}  conf=${c.confidence.toFixed(2)}  skills=${c.scores.skills_match.toFixed(2)}  exp=${c.scores.experience_relevance.toFixed(2)}  culture=${c.scores.culture_signal.toFixed(2)}${flag ? "  " + flag : ""}`,
     );
     console.log(`    Strengths: ${c.strengths.join(" | ")}`);
     console.log(`    Gaps:      ${c.gaps.join(" | ")}`);

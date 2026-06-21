@@ -98,7 +98,7 @@ export interface RankerOutput {
 }
 
 export async function rankCandidates(
-  scores: Array<ResumeAgentOutput & { pii_stripped: boolean; tokens_used: number }>,
+  scores: Array<ResumeAgentOutput & { pii_stripped: boolean; tokens_used: number; enforcer_applied: boolean }>,
 ): Promise<RankerOutput> {
   const prompt = buildRankingPrompt(scores);
 
@@ -136,7 +136,7 @@ export async function rankCandidates(
   const metaMap = new Map(
     scores.map((s) => [
       s.id,
-      { pii_stripped: s.pii_stripped, tokens_used: s.tokens_used },
+      { pii_stripped: s.pii_stripped, tokens_used: s.tokens_used, enforcer_applied: s.enforcer_applied },
     ]),
   );
 
@@ -145,12 +145,14 @@ export async function rankCandidates(
     const meta = metaMap.get(r["id"] as string) ?? {
       pii_stripped: false,
       tokens_used: 0,
+      enforcer_applied: false,
     };
     return CandidateResultSchema.parse({
       ...r,
       human_override: null,
       pii_stripped: meta.pii_stripped,
       tokens_used: meta.tokens_used,
+      enforcer_applied: meta.enforcer_applied,
     });
   });
 

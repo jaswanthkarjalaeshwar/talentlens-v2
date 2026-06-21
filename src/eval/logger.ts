@@ -44,10 +44,18 @@ async function getDb(): Promise<Database> {
       experience_relevance REAL NOT NULL,
       culture_signal       REAL NOT NULL,
       tokens_used          INTEGER NOT NULL,
+      enforcer_applied     INTEGER NOT NULL DEFAULT 0,
       PRIMARY KEY (id, run_id),
       FOREIGN KEY (run_id) REFERENCES screening_runs(run_id)
     )
   `);
+
+  // Migrate existing tables that predate the enforcer_applied column
+  try {
+    db.run(`ALTER TABLE candidate_scores ADD COLUMN enforcer_applied INTEGER NOT NULL DEFAULT 0`);
+  } catch {
+    // column already exists — safe to ignore
+  }
 
   db.run(`
     CREATE TABLE IF NOT EXISTS eval_runs (
@@ -95,8 +103,8 @@ export async function logScreeningRun(run: ScreeningRun): Promise<void> {
     database.run(
       `INSERT OR REPLACE INTO candidate_scores
         (id, run_id, rank, overall_fit, verdict, confidence, escalate,
-         skills_match, experience_relevance, culture_signal, tokens_used)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+         skills_match, experience_relevance, culture_signal, tokens_used, enforcer_applied)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         c.id,
         run.run_id,
@@ -109,6 +117,7 @@ export async function logScreeningRun(run: ScreeningRun): Promise<void> {
         c.scores.experience_relevance,
         c.scores.culture_signal,
         c.tokens_used,
+        c.enforcer_applied ? 1 : 0,
       ],
     );
   }

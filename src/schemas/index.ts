@@ -44,6 +44,7 @@ export const CandidateResultSchema = z.object({
   human_override: z.boolean().nullable(),
   pii_stripped: z.boolean(),
   tokens_used: z.number().int().nonnegative(),
+  enforcer_applied: z.boolean(),
 });
 
 export type CandidateResult = z.infer<typeof CandidateResultSchema>;
