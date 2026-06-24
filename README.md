@@ -1,5 +1,7 @@
 # TalentLens v2
 
+> New to multi-agent systems or evaluating this from a product/strategy lens? [README-strategist.md](./README-strategist.md) covers the same ground in plain English — including the architecture, the eval story, and the design decisions behind the system.
+
 Production-grade multi-agent candidate screening system. Scores resumes 
 against job descriptions using parallel agent execution, deterministic 
 business rule enforcement, and an eval suite with LLM-as-judge scoring.
